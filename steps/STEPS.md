@@ -39,3 +39,13 @@ We created a `src/components/Contact.jsx` file to serve as our "Contact Page" se
 We then imported and added `<Contact />` into `src/App.jsx` right before the footer. Since the "Join Us" button in the Navbar already points to `href="#contact"`, clicking the button automatically scrolls the user down to this new contact page!
 
 *Git Commit*: `feat: Add Contact section and wire up Join Us button`
+
+## Step 6: Multi-Page Routing Architecture
+
+We transitioned the website from a single-page scrolling layout to a multi-page setup using React Router.
+1. **Installed React Router**: Ran `npm install react-router-dom`.
+2. **Created Pages**: Added a `src/pages` directory with `HomePage.jsx`, `AboutPage.jsx`, `ServicesPage.jsx`, and `ContactPage.jsx`. We filled each new page with extra fake content (like FAQs and banners) to make them look like full separate pages.
+3. **Refactored Navbar**: Swapped the standard `<a>` tags in `Navbar.jsx` for `<NavLink>` components so the app changes pages instantly without refreshing the browser.
+4. **Added HashRouter**: We wrapped `App.jsx` in a `<HashRouter>` (which is ideal for GitHub Pages deployments) and defined our `<Routes>`.
+
+*Git Commit*: `refactor: Convert app to multi-page architecture with react-router-dom`
